@@ -1,0 +1,28 @@
+<p>signals works!</p>
+<p>signal 'count()' <button (click)="increment()" class="btn-orange">increment</button> - {{ count() }}</p>
+<br>
+<p>or use the <b>.update()</b> operation to compute a new value from the previous one:</p>
+
+<p>update signal 'count()' <button (click)="updateCount()" class="btn-orange">update</button> - {{ count() }}</p>
+
+<br>
+<p>signal countReadOnly <b>{{countReadOnly()}}</b></p>
+<p class="text-red-400">The readonly signal reflects any changes made to the original writable signal, but cannot be modified using set() or update() methods.</p>
+<br>
+<p><b>doubleCount and +300</b>:  <span class="text-green-600">{{doubleCount()}}</span></p>
+<br>
+<br>
+<p><button (click)="setLinkedCount()" class="btn-orange">setLinkedCount</button> linkedCount: {{linkedCount()}}</p>
+<br>
+<br>
+<h2>Example with <b>prevent same</b> value ('test')</h2>
+<input type="text" [(ngModel)]="inputData" class="border">
+<p>input: {{inputData()}}</p>
+<p><button (click)="setInputToTestData()" class="btn-orange">set input to test value</button></p>
+
+<br>
+<br>
+<p>signal received from observable {{counterFromRxjs()}}</p>
+<br>
+<br>
+

@@ -1,0 +1,25 @@
+<div class="p-6 max-w-md mx-auto bg-white rounded-xl shadow-md space-y-4">
+  <h2 class="text-2xl font-bold text-gray-900">Signal Forms</h2>
+  
+  <div class="space-y-2">
+    <label class="block text-sm font-medium text-gray-700">Name: </label>
+    <input 
+      class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+      [value]="name()" (input)="updateName($event)" />
+    @if (nameError()) {
+      <p class="text-sm text-red-600">{{ nameError() }}</p>
+    }
+    <p class="text-sm text-gray-600">Current Name: <span class="font-semibold">{{ name() }}</span></p>
+  </div>
+
+  <div class="space-y-2">
+    <label class="block text-sm font-medium text-gray-700">Email: </label>
+    <input 
+      class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+      [value]="email()" (input)="updateEmail($event)" />
+    @if (emailError()) {
+      <p class="text-sm text-red-600">{{ emailError() }}</p>
+    }
+    <p class="text-sm text-gray-600">Current Email: <span class="font-semibold">{{ email() }}</span></p>
+  </div>
+</div>

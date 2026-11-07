@@ -1,3 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+
+.btn-orange {
+  @apply inline-flex items-center justify-center gap-3
+  rounded-xl bg-gradient-to-r from-orange-500 to-amber-500
+  px-2 py-1.5 text-base font-semibold text-white
+  shadow-lg shadow-orange-500/30
+  transition-all duration-300 ease-out
+  hover:-translate-y-1 hover:from-orange-600 hover:to-amber-600
+  hover:shadow-xl hover:shadow-orange-500/40
+  active:translate-y-0 active:scale-95
+  focus-visible:outline-none focus-visible:ring-4
+  focus-visible:ring-orange-300
+  cursor-pointer;
+}
